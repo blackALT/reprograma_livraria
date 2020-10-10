@@ -1,1 +1,72 @@
-[{"id":1,"title":"Title 1","author":"Author 1","category":"ficcao","available":true},{"id":3,"title":"Title 3","author":"Author 3","category":"ficcao","available":false},{"id":4,"title":"Title 4","author":"Author 5","category":"Ficção","available":true}]
+[
+    {
+        "id": 1,
+        "title": "O morro dos ventos uivantes",
+        "author": "Emily Brontë,",
+        "category": "Romance",
+        "available": true
+    },
+    {
+        "id": 2,
+        "title": "O código DaVince",
+        "author": "Dan Brown",
+        "category": "Suspense",
+        "available": false
+    },
+    {
+        "id": 3,
+        "title": "Harry Potter e o cálice de Fogo",
+        "author": "J. K. Rowling",
+        "category": "Ficção",
+        "available": true
+    },
+    {
+        "id": 4,
+        "title": "As Crônicas de Nárnia",
+        "author": "C. S. Lewis",
+        "category": "Ficção",
+        "available": true
+    },
+    {
+        "id": 5,
+        "title": "A Outra Face",
+        "author": "Sidney Sheldon",
+        "category": "Suspense",
+        "available": true
+    },
+    {
+        "id": 6,
+        "title": "Mentes Criminosas",
+        "author": "Sérgio Pereira Couto",
+        "category": "Investigação",
+        "available": true
+    },
+    {
+        "id": 7,
+        "title": "Morte Súbita",
+        "author": "J. K. Rowling",
+        "category": "Policial",
+        "available": true
+    },
+    {
+        "id": 8,
+        "title": "Um corpo na biblioteca",
+        "author": "Agatha Christie",
+        "category": "Policial",
+        "available": true
+    },
+    {
+        "id": 9,
+        "title": "A Vida Escondida no Quarto",
+        "author": "Wanessa Souza",
+        "category": "Poesia",
+        "available": false
+    },
+    {
+        "id": 10,
+        "title": "O Mundo de Sofia",
+        "author": "Jostein Gaarder",
+        "category": "Romance",
+        "available": false
+    }
+]
