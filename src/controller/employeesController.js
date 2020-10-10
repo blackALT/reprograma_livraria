@@ -9,6 +9,7 @@ const getAllEmployees = (req, res) => {
 }
 
 const postEmployees = (req, res) => {
+  console.log(req.url);
     console.log(req.body);
   
     const { id, name, age, position, sector } = req.body;
@@ -19,7 +20,7 @@ const postEmployees = (req, res) => {
       if (err) {
         return res.status(424).send({ message: err });
       }
-      console.log("Funcionário atualizado com sucesso!");
+      console.log("Funcionário inserido com sucesso!");
     });
   
     res.status(201).send(employees);  
@@ -36,7 +37,7 @@ const postEmployees = (req, res) => {
       if (err) {
         return res.status(424).send({ message: err });
       }
-      console.log("Funcionário demitido!");
+      console.log("Funcionário excluído com sucesso!");
     });
   
     res.status(200).send(employees);
@@ -44,7 +45,7 @@ const postEmployees = (req, res) => {
 
   const getEmployeeById = (req, res) => {
     const id = req.params.id;
-    const employee = employees.filter(employee => employee.id == id);
+    const employee = employees.filter((employee) => employee.id == id);
     const ageEmployee = employee.map(employee => employee.age);
     res.status(200).send(ageEmployee);
 }

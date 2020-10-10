@@ -41,15 +41,16 @@ const deleteBook = (req, res) => {
     res.status(200).send(books);
   };
 
-const getAllBooksAvailable = (req, res) => {
-    const booksAvailable = books.filter(book => book.available == true);
-    const available = booksAvailable.map(book => book.title);
-    res.status(200).send(available);
+const getBookByCategory = (req, res) => {
+    const categoria = req.params.categoria;
+    const bookFiltered = books.filter(book => book.category == categoria);
+    res.status(200).send(bookFiltered);
 }
 
-const getBookByCategory = (req, res) => {
-    const category = req.params.category;
-    res.status(200).send(books.filter(book => book.category == category));
+const getAllBooksAvailable = (req, res) => {
+    const booksAvailable = books.filter(book => book.available == true);
+    //const available = booksAvailable.map(book => book.title);
+    res.status(200).send(booksAvailable);
 }
 
 module.exports = {

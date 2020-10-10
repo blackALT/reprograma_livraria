@@ -8,5 +8,4 @@ router.get("/disponiveis", controller.getAllBooksAvailable);
 router.get("/:categoria", controller.getBookByCategory);
 router.delete("/:id", controller.deleteBook);
 
-
 module.exports = router
