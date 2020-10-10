@@ -1,1 +1,1 @@
-[{"id":1,"title":"Title 1","author":"Author 1","category":"Ficção","available":true},{"id":3,"title":"Title 3","author":"Author 3","category":"Ficção","available":false}]
+[{"id":1,"title":"Title 1","author":"Author 1","category":"ficcao","available":true},{"id":3,"title":"Title 3","author":"Author 3","category":"ficcao","available":false},{"id":4,"title":"Title 4","author":"Author 5","category":"Ficção","available":true}]

@@ -7,10 +7,22 @@ const getAllBooks = (req, res) => {
     res.status(200).send(books);
 }
 
-const getAllBooksAvailable = (req, res) => {
-    const booksAvailable = books.filter(book => book.available == true);
-    res.status(200).send(booksAvailable);
-}
+const postBooks = (req, res) => {
+    console.log(req.body);
+  
+    const { id, title, author, category, available } = req.body;
+  
+    books.push({ id, title, author, category, available });
+  
+    fs.writeFile("./src/model/books.json", JSON.stringify(books), 'utf8', function(err) {
+      if (err) {
+        return res.status(424).send({ message: err });
+      }
+      console.log("Livro atualizado com sucesso!");
+    });
+  
+    res.status(201).send(books);  
+  };
 
 const deleteBook = (req, res) => {
     const id = req.params.id;
@@ -29,28 +41,21 @@ const deleteBook = (req, res) => {
     res.status(200).send(books);
   };
 
-const postBooks = (req, res) => {
-    console.log(req.body);
-  
-    const { id, title, author, category, available } = req.body;
-  
-    books.push({ id, title, author, category, available });
-  
-    fs.writeFile("./src/model/books.json", JSON.stringify(books), 'utf8', function(err) {
-      if (err) {
-        return res.status(424).send({ message: err });
-      }
-      console.log("Livro atualizado com sucesso!");
-    });
-  
-    res.status(201).send(books);  
-  };
+const getAllBooksAvailable = (req, res) => {
+    const booksAvailable = books.filter(book => book.available == true);
+    const available = booksAvailable.map(book => book.title);
+    res.status(200).send(available);
+}
 
-
+const getBookByCategory = (req, res) => {
+    const category = req.params.category;
+    res.status(200).send(books.filter(book => book.category == category));
+}
 
 module.exports = {
     getAllBooks,
     postBooks,
     deleteBook,
+    getBookByCategory,
     getAllBooksAvailable
 }
