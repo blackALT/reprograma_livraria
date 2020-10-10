@@ -3,8 +3,8 @@ const bodyParser = require("body-parser");
 const app = express();
 
 const index = require("./routes/index");
-const employees = require("./routes/employees");
-const books = require("./routes/books");
+const employees = require("./routes/employeesRoute");
+const books = require("./routes/booksRoute");
 
 app.use(bodyParser.json());
 
